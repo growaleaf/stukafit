@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StukaFit — Check Your HOTAS Covers IL-2 Sturmovik's Cockpit Controls</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <h1>Check Your HOTAS Covers IL-2 Sturmovik's Cockpit Controls</h1>
+  <p class="tagline">Pick the controller you own (or are about to buy) and the aircraft class you fly — a single-engine fighter or a multi-engine bomber. See how many of that class's core cockpit functions land on your stick, and which categories you'll push to keyboard.</p>
+</header>
+
+<main>
+  <section class="picker">
+    <div class="picker-field">
+      <label for="controller-select">Controller</label>
+      <select id="controller-select"></select>
+    </div>
+    <div class="picker-field">
+      <label for="tier-select">Aircraft Class</label>
+      <select id="tier-select"></select>
+    </div>
+  </section>
+
+  <section class="result">
+    <h2 id="result-heading"></h2>
+    <div class="result-meta">
+      <div><span class="meta-label">Controller has:</span> <span id="controller-slots"></span></div>
+      <div><span class="meta-label">Class needs:</span> <span id="tier-needs"></span></div>
+    </div>
+    <p id="fit-summary" class="fit-summary"></p>
+
+    <table class="category-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Functions needed</th>
+          <th>Slots covered</th>
+          <th>Left over</th>
+        </tr>
+      </thead>
+      <tbody id="category-rows"></tbody>
+    </table>
+
+    <div id="shortfall-notes" class="shortfall-notes"></div>
+
+    <div class="source-block">
+      <div class="source-line" id="controller-sources"></div>
+      <div class="source-line" id="tier-sources"></div>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>What this counts</h2>
+    <p>"Core functions" are counted from a dated primary source per aircraft class — not the game's full bindable-key list. IL-2 Sturmovik: Great Battles does not publish its own consolidated per-aircraft control-count reference, so the counts here come from a public, community-maintained reference spreadsheet that maps every default key-mapping-menu entry against every aircraft in the game. A function counts if it carries a real default keybind in that sheet and a marker showing it applies to the representative aircraft for that class. "Slots" means physical buttons, axes, and hats on the controller, counted from the manufacturer's own product page. One physical input covers one function.</p>
+    <p>This tool reports counts. It does not tell you a controller is required, sufficient, or the best choice for IL-2 — that judgment is yours.</p>
+  </section>
+
+  <section class="about">
+    <h2>Controllers and aircraft classes covered</h2>
+    <p>Controllers: Thrustmaster T.16000M FCS, T.16000M FCS HOTAS, T.Flight HOTAS X, Logitech G X56 H.O.T.A.S.</p>
+    <p>Aircraft classes: Single-Engine Fighter (represented by the Bf 109 G-6), Multi-Engine Bomber (represented by the He 111 H-6). The bomber class carries far more core functions — independent throttle/mixture/prop/radiator controls per engine, plus bomb sight, bomb bay, and gunner/turret station switching that a fighter never uses.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>Built for forum.il2sturmovik.com and r/IL2sturmovik. Every number links to the source it came from. Found a mistake, or want another controller or aircraft class added? Post in the thread — this list grows from what pilots actually fly.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
