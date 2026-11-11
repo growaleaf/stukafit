@@ -1,5 +1,5 @@
 // Set after the Stripe payment link is created (see STRIPE.md).
-const PRO_PAYMENT_LINK_URL = "https://buy.stripe.com/fZu9AVfGU2XT5Ri2yLfrW32";
+const PRO_PAYMENT_LINK_URL = "https://buy.stripe.com/28E7sLcmQ5BB7ZK9b10kE1I";
 
 function computeFit(controller, tier) {
   const totalSlots = controller.buttons + controller.axes + controller.hats;
